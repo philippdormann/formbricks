@@ -64,8 +64,8 @@ jobs:
           build-args: |
             DATABASE_URL=${{ env.DATABASE_URL }}
 
-      - name: Sign the published Docker image
-        if: ${{ github.event_name != 'pull_request' }}
-        run: |
-          cosign sign --yes ghcr.io/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
-          cosign sign --yes ghcr.io/${{ env.IMAGE_NAME }}:latest
+      # - name: Sign the published Docker image
+      #   if: ${{ github.event_name != 'pull_request' }}
+      #   run: |
+      #     cosign sign --yes ghcr.io/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+      #     cosign sign --yes ghcr.io/${{ env.IMAGE_NAME }}:latest
