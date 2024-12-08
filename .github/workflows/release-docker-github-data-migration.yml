@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: formbricks/data-migrations
+  IMAGE_NAME: philippdormann/formbricks:data-migrations-latest
   DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/formbricks?schema=public"
 
 jobs:
